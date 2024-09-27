@@ -30,6 +30,7 @@ const Popup = ({ data, closeFunction, secondaryTitle, highlightTitle }) => {
                     src={imgSrc}
                     alt={`Image ${index + 1}`}
                     fill
+                    loading='lazy'
                     className={styles.popupImage}
                   />
                 </div>

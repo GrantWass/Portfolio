@@ -18,7 +18,6 @@
   justify-content: center;
   align-items: center;
   margin-top: 30px;
-
 }
 
 .textContainer {
@@ -107,6 +106,8 @@
   align-items: center;
   position: relative;
   overflow: hidden;
+  background-color: white;
+
 }
 
 .headshot {

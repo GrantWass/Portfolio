@@ -26,6 +26,7 @@ const WorkExperience = () => {
           type="x-large" 
           event={() => { handleClick(i); }} 
           backgroundImage={project.main_image}
+          priority
         >
         </Card>
       ))}

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { FaEnvelope, FaPhone, FaLinkedin, FaInstagram, FaStrava, FaFileAlt } from 'react-icons/fa';
 import styles from "../Styles/title.module.css";
 import { useEffect, useState } from "react";
-import Headshot from '/public/Headshot.jpg'
+import Headshot from '/public/Headshot.webp'
 
 const Title = () => {
   const words = ["Developer", "Learner", "Student", "Runner"];
@@ -43,6 +43,7 @@ const Title = () => {
             width={200}
             height={200}
             className={styles.headshot}
+            priority={true}
           />
         </div>
         <div className={styles.contactContainer}>

@@ -18,6 +18,7 @@ const Card = ({
   backgroundImage,
   enlargeIcon,
   textBackground,
+  priority
 }) => {
   const classMap = {
     "x-large": styles.cardSpaceLarge,
@@ -62,6 +63,7 @@ const Card = ({
             fill
             style={{ objectFit: "cover" }}
             className={styles.cardImage}
+            priority={priority}
           />
         )}
         {date && <div className={styles.cardDate} style={grayBackground}>{date}</div>}

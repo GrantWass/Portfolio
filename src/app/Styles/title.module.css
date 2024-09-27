@@ -1,0 +1,156 @@
+/* title.module.css */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+.imgContactContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  width: auto;
+}
+
+.textContent{
+  flex: 1;
+  margin-right: 50px;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .textContent {
+    margin-right: 0px;
+  }
+}
+
+.textBar {
+  height: 150;
+  background-color: var(--accessory-color);
+  width: 15px;
+  z-index: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.highlight {
+  color: var(--accessory-color);
+  font-style: oblique;
+  font-weight: bolder;
+  font-size: 120%;
+}
+
+.wordTransition {
+  display: inline-block;
+  position: absolute;
+  color: var(--accessory-color);
+  font-style: oblique;
+  font-weight: bolder;
+  font-size: 120%;
+  margin-left: .875rem;
+  margin-top: -0.25rem;
+}
+
+.animate {
+  transform: translateY(100%);
+  opacity: 0;
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.imgContainer {
+  height: 200px;
+  width: 200px;
+  border-color: white;
+  border-radius: 500px;
+  border-width: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.headshot {
+  object-fit: cover;
+  height: 380px;
+  width: 380px;
+  overflow: hidden;
+  margin-top: 25px;
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px;
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.contactItem:hover{
+  cursor: pointer;
+}
+
+.contactItem a {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 900px) {
+  .contactItem a span{
+    display: none;
+  }
+
+  .icon {
+    font-size: 5em;
+    margin-right: 0;
+  }
+}
+
+.icon {
+  margin-right: 8px;
+  font-size: 1.2em;
+}

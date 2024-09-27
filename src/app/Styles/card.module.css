@@ -1,0 +1,139 @@
+/* card.css */
+.cardSpaceLarge,
+.cardSpace,
+.cardSpaceMedium,
+.cardSpaceSmall {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.cardSpaceLarge .card {
+    height: 350px;
+    width: 950px;
+}
+
+@media screen and (max-width: 1100px) {
+    .cardSpaceLarge .card {
+        width: 650px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .cardSpaceLarge .card {
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cardSpaceLarge .card {
+        width: 350px;
+        height: 250px; /* Consistent height across screen sizes */
+    }
+}
+
+.cardSpace .card {
+    height: 250px;
+    width: 400px;
+}
+
+@media screen and (max-width: 550px) {
+    .cardSpace .card {
+        width: 325px;
+    }
+    .cardSpace .card .cardTitle {
+        font-size: 1rem;
+    }
+}
+
+.cardSpaceMedium .card {
+    height: 125px;
+    width: 150px;
+}
+
+.cardSpaceSmall .card {
+    height: 100px;
+    width: 100px;
+}
+
+.card {
+    background-color: var(--card-background);
+    border: 3px solid white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    gap: 6px;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.cardSpace .card:hover,
+.cardSpaceLarge .card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.cardImage {
+    overflow: hidden;
+    border-radius: 10px;
+    opacity: 0.6;
+}
+
+.cardTitle,
+.cardDescription,
+.cardDate,
+.cardTopRight {
+    position: absolute;
+}
+
+.cardSpace .cardTitle,
+.cardSpaceLarge .cardTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+}
+
+.cardSpaceSmall .cardTitle,
+.cardSpaceMedium .cardTitle {
+    position: relative;
+}
+
+.cardDate {
+    bottom: 10px;
+    right: 10px;
+}
+
+.cardTopRight {
+    top: 10px;
+    right: 10px;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.cardDescription {
+    bottom: 10px;
+    left: 10px;
+    padding: 5px;
+}
+
+@media screen and (max-width: 750px) {
+    .cardDescription {
+        display: none;
+    }
+
+    .cardTopRight {
+        bottom: 10px;
+        left: 10px;
+        width: fit-content;
+        top: auto;
+        font-size: 1rem;
+    }
+}
